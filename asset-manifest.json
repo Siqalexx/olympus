@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/olympus/static/css/main.01f80b6c.css",
-    "main.js": "/olympus/static/js/main.8ea2cc81.js",
+    "main.css": "/olympus/static/css/main.f83aad35.css",
+    "main.js": "/olympus/static/js/main.f65d5e1a.js",
     "static/js/453.4904dd91.chunk.js": "/olympus/static/js/453.4904dd91.chunk.js",
     "static/media/Montserrat-Bold.ttf": "/olympus/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
     "static/media/Montserrat-Medium.ttf": "/olympus/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
     "static/media/Montserrat-Regular.ttf": "/olympus/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
     "index.html": "/olympus/index.html",
-    "main.01f80b6c.css.map": "/olympus/static/css/main.01f80b6c.css.map",
-    "main.8ea2cc81.js.map": "/olympus/static/js/main.8ea2cc81.js.map",
+    "main.f83aad35.css.map": "/olympus/static/css/main.f83aad35.css.map",
+    "main.f65d5e1a.js.map": "/olympus/static/js/main.f65d5e1a.js.map",
     "453.4904dd91.chunk.js.map": "/olympus/static/js/453.4904dd91.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.01f80b6c.css",
-    "static/js/main.8ea2cc81.js"
+    "static/css/main.f83aad35.css",
+    "static/js/main.f65d5e1a.js"
   ]
 }
