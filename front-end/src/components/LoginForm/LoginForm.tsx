@@ -8,7 +8,7 @@ import { ISignInRequest } from '../../models/request/ISignInRequest';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { signInSchema } from '../../models/zodSchemas/signInSchema';
 import './loginForm.scss';
-import axios, { AxiosError } from 'axios';
+import { AxiosError } from 'axios';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
@@ -85,7 +85,7 @@ const LoginForm = () => {
                 <input
                     {...register('username')}
                     className="formAuth__input formAuth__input_login"
-                    placeholder="Username or email address"
+                    placeholder="Введите имя пользователя"
                     type="text"
                 />
                 {errors.username && (
@@ -98,7 +98,7 @@ const LoginForm = () => {
                     <input
                         {...register('password')}
                         className="formAuth__input formAuth__input_password"
-                        placeholder="Password"
+                        placeholder="Введите пароль"
                         type={passwordShown ? 'text' : 'password'}
                     />
                     {passwordShown ? (
