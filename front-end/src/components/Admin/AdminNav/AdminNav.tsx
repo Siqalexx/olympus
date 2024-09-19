@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Context } from '../../..';
 import { useNavigate } from 'react-router-dom';
 import './AdminNav.scss';
@@ -15,9 +15,12 @@ interface AdminNavProps {
     type?: 'user' | 'judge';
 }
 
+type ViewType = 'info' | 'results' | 'answers';
+
 const AdminNav: React.FC<AdminNavProps> = (props) => {
     const { store } = useContext(Context);
     const history = useNavigate();
+    const [view, setView] = useState<ViewType>('info');
 
     function handleExit(): void {
         try {
@@ -91,33 +94,27 @@ const AdminNav: React.FC<AdminNavProps> = (props) => {
                         <div className="admin-nav__link-container">
                             <div
                                 onClick={() => handleLinkClick('tasks')}
-                                className="admin-nav__link"
+                                className={`admin-nav__link ${store.selectedViewContent === 'tasks' ? 'admin-nav__link_active' : ''}`}
                             >
                                 <img
                                     src={taskIcon}
-                                    alt="Иконка ответов"
-                                    className="admin-nav__link-icon"
-                                ></img>
-                                <div
-                                    className={`admin-nav__link-title ${
-                                        store.selectedViewContent === 'answers'
-                                            ? 'admin-nav__link-title_active'
-                                            : ''
-                                    }`}
-                                >
+                                    alt="Иконка заданий"
+                                    className={`admin-nav__link-icon ${store.selectedViewContent === 'tasks' ? 'admin-nav__link-icon_active' : ''}`}
+                                />
+                                <div className={`admin-nav__link-title ${store.selectedViewContent === 'tasks' ? 'admin-nav__link-title_active' : ''}`}>
                                     Задания
                                 </div>
                             </div>
                             <div
                                 onClick={() => handleLinkClick('results')}
-                                className="admin-nav__link"
+                                className={`admin-nav__link ${store.selectedViewContent === 'results' ? 'admin-nav__link_active' : ''}`}
                             >
                                 <img
                                     src={resultIcon}
                                     alt="Иконка итоговых результатов"
-                                    className="admin-nav__link-icon"
-                                ></img>
-                                <div className="admin-nav__link-title">
+                                    className={`admin-nav__link-icon ${store.selectedViewContent === 'results' ? 'admin-nav__link-icon_active' : ''}`}
+                                />
+                                <div className={`admin-nav__link-title ${store.selectedViewContent === 'results' ? 'admin-nav__link-title_active' : ''}`}>
                                     Итоговые результаты
                                 </div>
                             </div>
