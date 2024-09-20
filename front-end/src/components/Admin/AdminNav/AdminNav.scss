@@ -178,11 +178,23 @@
     &__link {
         display: flex;
         gap: 6px;
+        align-items: center;
+        padding: 8px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+        background-color: transparent;
+        &_active {
+            background-color: rgba(57, 135, 253, 0.1);
+        }
     }
 
     &__link-icon {
         width: 16px;
         height: 16px;
+        filter: brightness(0) saturate(100%) invert(22%) sepia(0%) saturate(0%) hue-rotate(154deg) brightness(95%) contrast(86%);
+        &_active {
+            filter: brightness(0) saturate(100%) invert(52%) sepia(66%) saturate(2511%) hue-rotate(186deg) brightness(100%) contrast(99%);
+        }
     }
 
     &__link-title {
