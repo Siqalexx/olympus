@@ -20,7 +20,6 @@ type ViewType = 'info' | 'results' | 'answers';
 const AdminNav: React.FC<AdminNavProps> = (props) => {
     const { store } = useContext(Context);
     const history = useNavigate();
-    const [view, setView] = useState<ViewType>('info');
 
     function handleExit(): void {
         try {
