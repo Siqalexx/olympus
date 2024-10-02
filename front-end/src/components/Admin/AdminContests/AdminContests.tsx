@@ -139,7 +139,7 @@ const AdminContests: React.FC<AdminContestsProps> = () => {
                 })}
             </ul>
             <div className="admin-content__pages">
-                {pageNumbers.map((item) => (
+                {totalPageCount > 1 && pageNumbers.map((item) => (
                     <div
                         key={item}
                         className={`admin-content__page ${
